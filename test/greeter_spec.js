@@ -1,4 +1,4 @@
-Greeter = require('../scripts/demo').Greeter;
+Greeter = require('../scripts/greeter').Greeter;
 
 describe('Jasmine', function() {
   var greeter;
