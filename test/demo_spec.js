@@ -1,3 +1,5 @@
+Greeter = require('../scripts/demo').Greeter;
+
 describe('Jasmine', function() {
   var greeter;
   
