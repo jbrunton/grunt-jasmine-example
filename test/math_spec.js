@@ -1,4 +1,4 @@
-Math = require('../scripts/math').Math;
+Math = require('../scripts/math');
 
 describe('Math', function() {
   var math;

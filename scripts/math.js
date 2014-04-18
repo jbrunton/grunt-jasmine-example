@@ -9,4 +9,4 @@ Math.prototype.fib = function(n) {
   }
 }
 
-exports.Math = Math;
+module.exports = Math;
