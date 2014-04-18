@@ -6,8 +6,7 @@ module.exports = function(grunt) {
         src: 'scripts/*.js',
         options: {
           specs: 'test/*_spec.js',
-          outfile: 'SpecRunner.html',
-          keepRunner: true
+          outfile: 'test/SpecRunner.html'
         }
       }
     }
