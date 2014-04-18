@@ -20,10 +20,21 @@ module.exports = function(grunt) {
         src: 'test/*_spec.js',
         dest: 'build/test.js'
       }
+    },
+    
+    watch: {
+      scripts: {
+        files: ['scripts/**/*.js', 'test/**/*.js'],
+        tasks: ['browserify'],
+        options: {
+          spawn: false,
+        },
+      },
     }
   });
   
   grunt.loadNpmTasks('grunt-contrib-jasmine');
   grunt.loadNpmTasks('grunt-browserify');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   
 };
