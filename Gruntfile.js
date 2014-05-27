@@ -18,7 +18,12 @@ module.exports = function(grunt) {
       },
       test: {
         src: 'test/*_spec.js',
-        dest: 'build/test.js'
+        dest: 'build/test.js',
+        options: {
+          bundleOptions: {
+            debug: true
+          }
+        }
       }
     },
     
