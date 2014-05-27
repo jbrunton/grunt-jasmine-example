@@ -50,7 +50,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-shell');
   
   grunt.registerTask('test', ['browserify:test', 'jasmine']);
-  grunt.registerTask('debug', ['browserify:test', 'jasmine:test:build', 'shell:debug']);
+  grunt.registerTask('test:debug', ['browserify:test', 'jasmine:test:build', 'shell:debug']);
   grunt.registerTask('build', ['browserify:release']);
   
 };
