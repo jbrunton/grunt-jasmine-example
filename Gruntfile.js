@@ -35,14 +35,22 @@ module.exports = function(grunt) {
           spawn: false,
         },
       },
+    },
+    
+    shell: {
+      debug: {
+        command: "open build/test/SpecRunner.html"
+      }
     }
   });
   
   grunt.loadNpmTasks('grunt-contrib-jasmine');
   grunt.loadNpmTasks('grunt-browserify');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-shell');
   
   grunt.registerTask('test', ['browserify:test', 'jasmine']);
+  grunt.registerTask('debug', ['browserify:test', 'jasmine:test:build', 'shell:debug']);
   grunt.registerTask('build', ['browserify:release']);
   
 };
