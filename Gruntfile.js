@@ -30,7 +30,7 @@ module.exports = function(grunt) {
     watch: {
       scripts: {
         files: ['scripts/**/*.js', 'test/**/*.js'],
-        tasks: ['browserify'],
+        tasks: ['browserify', 'jasmine'],
         options: {
           spawn: false,
         },
