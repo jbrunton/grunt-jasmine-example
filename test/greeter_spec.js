@@ -1,13 +1,13 @@
 Greeter = require('../scripts/greeter');
 
-describe('Jasmine', function() {
+describe('Greeter', function() {
   var greeter;
   
   beforeEach(function() {
     greeter = new Greeter();
   });
   
-  it('should run tests', function() {
+  it('should greet the given object', function() {
     expect(greeter.greet('World')).toBe('Hello, World!');
   });  
 });
