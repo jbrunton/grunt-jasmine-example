@@ -21,7 +21,7 @@ Run ```grunt watch```, and any changes made to the source files (in the ```scrip
 
 ### Debugging in the browser
 
-To debug the tests in a browser, run ```grunt debug```.  This will build the tests, and then open the Jasmine SpecRunner.html file in your default browser.  If you run ```grunt watch``` and use the [LivePage](https://chrome.google.com/webstore/detail/livepage/pilnojpmdoofaelbinaeodfpjheijkbh?hl=en) extension then changes to the source files will immediately be reflected in the browser.
+To debug the tests in a browser, run ```grunt test:debug```.  This will build the tests, and then open the Jasmine SpecRunner.html file in your default browser.  If you run ```grunt watch``` and use the [LivePage](https://chrome.google.com/webstore/detail/livepage/pilnojpmdoofaelbinaeodfpjheijkbh?hl=en) extension then changes to the source files will immediately be reflected in the browser.
 
 The Gruntfile configures Browserify to generate source maps for test builds, so you can debug the actual source files rather than the concatenated versions.
 
