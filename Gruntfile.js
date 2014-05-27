@@ -12,7 +12,7 @@ module.exports = function(grunt) {
     },
     
     browserify: {
-      main: {
+      release: {
         src: 'scripts/*.js',
         dest: 'build/main.js'
       },
@@ -42,6 +42,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-browserify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   
-  grunt.registerTask('test', ['browserify', 'jasmine']);
+  grunt.registerTask('test', ['browserify:test', 'jasmine']);
+  grunt.registerTask('build', ['browserify:release']);
   
 };
