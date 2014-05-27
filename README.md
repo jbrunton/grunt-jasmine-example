@@ -24,3 +24,7 @@ Run ```grunt watch```, and any changes made to the source files (in the ```scrip
 To debug the tests in a browser, run ```grunt debug```.  This will build the tests, and then open the Jasmine SpecRunner.html file in your default browser.  If you run ```grunt watch``` and use the [LivePage](https://chrome.google.com/webstore/detail/livepage/pilnojpmdoofaelbinaeodfpjheijkbh?hl=en) extension then changes to the source files will immediately be reflected in the browser.
 
 The Gruntfile configures Browserify to generate source maps for test builds, so you can debug the actual source files rather than the concatenated versions.
+
+### Continuous integration
+
+The project includes a ```.travis.yml``` file, which tells Travis how to install the necessary dependencies.  Travis recognises the package.json file and runs the ```test``` script in that (which just runs ```grunt test```).  You can see the Travis project [here](https://travis-ci.org/jbrunton/grunt-jasmine-example).
