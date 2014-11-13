@@ -3,7 +3,6 @@ module.exports = function(grunt) {
   grunt.initConfig({
     jasmine: {
       test: {
-        src: 'build/main.js',
         options: {
           specs: 'build/test.js',
           outfile: 'build/test/SpecRunner.html'
