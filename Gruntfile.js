@@ -15,7 +15,7 @@ module.exports = function(grunt) {
         src: 'scripts/**/*.js',
         dest: 'build/main.js'
       },
-      test: {
+      debug: {
         src: 'spec/**/*.js',
         dest: 'build/test.js',
         options: {
@@ -37,7 +37,7 @@ module.exports = function(grunt) {
     },
     
     shell: {
-      debug: {
+      openRunner: {
         command: "open build/test/SpecRunner.html"
       }
     }
@@ -48,8 +48,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-shell');
   
-  grunt.registerTask('test', ['browserify:test', 'jasmine']);
-  grunt.registerTask('test:debug', ['browserify:test', 'jasmine:test:build', 'shell:debug']);
+  grunt.registerTask('spec', ['browserify:debug', 'jasmine']);
+  grunt.registerTask('spec:debug', ['browserify:debug', 'jasmine:test:build', 'shell:openRunner']);
   grunt.registerTask('build', ['browserify:release']);
   
 };
