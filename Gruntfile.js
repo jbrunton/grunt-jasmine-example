@@ -19,7 +19,7 @@ module.exports = function(grunt) {
         src: 'spec/**/*.js',
         dest: 'build/test.js',
         options: {
-          bundleOptions: {
+          browserifyOptions: {
             debug: true
           }
         }
